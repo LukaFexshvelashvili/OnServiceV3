@@ -1,0 +1,47 @@
+@theme {
+  --color-bodyBg: #ffffff;
+
+  --color-main: #408cfd;
+  --color-purple: #4059fd;
+  --color-orange: #f69000;
+  --color-mainActive: #61a0ff;
+  --color-mainHover: #5499ff;
+
+  --color-mainClear: rgba(64, 140, 253, 0.1);
+  --color-mainLight: #45adff;
+  --color-mainDark: #035fc6;
+
+  --color-lineColor: rgba(0, 0, 0, 0.05);
+  --color-circleColor: rgba(0, 0, 0, 0.1);
+
+  --color-headDark90: #1a1a1a;
+  --color-headDark80: #333333;
+  --color-headDark: #131313;
+  --color-head: #666666;
+
+  --color-descDark: rgb(58, 58, 58);
+  --color-desc: #8c8c8c;
+  --color-descLight: #808080;
+
+  --font-mainRegular: #808080;
+  --font-mainMedium: #808080;
+  --font-mainSemiBold: #808080;
+  --font-mainBold: #808080;
+}
+
+@font-face {
+  font-family: mainRegular;
+  src: url("./assets/fonts/OnService-Regular");
+}
+@font-face {
+  font-family: mainMedium;
+  src: url("./assets/fonts/OnService-Medium");
+}
+@font-face {
+  font-family: mainSemiBold;
+  src: url("./assets/fonts/OnService-SemiBold");
+}
+@font-face {
+  font-family: mainBold;
+  src: url("./assets/fonts/OnService-Bold");
+}
