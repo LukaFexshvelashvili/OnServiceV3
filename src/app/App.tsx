@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Outlet, Route, Routes } from "react-router";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -8,25 +8,31 @@ import Design from "./pages/Design/Design";
 import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
+import NotFound from "./pages/NotFound/NotFound";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="website_development" element={<WebDeveloping />} />
-          <Route path="ad_making" element={<AdMaking />} />
-          <Route path="design" element={<Design />} />
-        </Route>
-      </Routes>
+      <AppRouter />
       <Footer />
     </>
   );
 }
 
-export default App;
+function AppRouter() {
+  return (
+    <Routes>
+      <Route path="/" errorElement={<NotFound />}>
+        <Route index element={<Home />} />
+        <Route path="services" element={<Services />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="website_development" element={<WebDeveloping />} />
+        <Route path="ad_making" element={<AdMaking />} />
+        <Route path="design" element={<Design />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
+}

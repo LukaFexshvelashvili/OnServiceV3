@@ -1,3 +1,6 @@
+import ServicesSection from "./components/ServicesSection";
+import StarterSection from "./components/StarterSection";
+
 export default function Home() {
   return (
     <>
@@ -5,7 +8,10 @@ export default function Home() {
         ციფრული სერვისები - ვებგვერდის დამზადება, დიზაინის დამზადება,
         გარეკლამება
       </title>
-      <div className="">HomePage</div>
+      <main className="min-h-[calc(100vh_-_var(--nav-height))]">
+        <StarterSection />
+        <ServicesSection />
+      </main>
     </>
   );
 }

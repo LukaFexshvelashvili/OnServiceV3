@@ -1,1 +1,183 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bodyBg: #ffffff;
+  --color-buttonText: #ffffff;
+
+  --color-main: #408cfd;
+  --color-purple: #4059fd;
+  --color-orange: #f69000;
+  --color-mainActive: #61a0ff;
+  --color-mainHover: #5499ff;
+
+  --color-mainClear: rgba(64, 140, 253, 0.1);
+  --color-mainLight: #45adff;
+  --color-mainDark: #035fc6;
+
+  --color-lineColor: rgba(0, 0, 0, 0.05);
+  --color-circleColor: rgba(0, 0, 0, 0.1);
+
+  --color-headDark90: #1a1a1a;
+  --color-headDark80: #333333;
+  --color-headDark60: #4d4d4d;
+  --color-headDark: #131313;
+  --color-head: #707070;
+
+  --color-descDark: rgb(58, 58, 58);
+  --color-desc: #8c8c8c;
+  --color-descLight: #808080;
+
+  --color-navDesc: #606060;
+
+  --color-white: #ffffff;
+  --color-whiteDesc: rgba(255, 255, 255, 0.8);
+  --color-whiteLow: rgba(255, 255, 255, 0.6);
+  --color-white70: rgba(255, 255, 255, 0.7);
+
+  --font-mainRegular: "mainRegular";
+  --font-mainMedium: "mainMedium";
+  --font-mainSemiBold: "mainSemiBold";
+  --font-mainBold: "mainBold";
+
+  --nav-height: 60px;
+}
+
+@font-face {
+  font-family: mainRegular;
+  src: url("../assets/fonts/OnService-Regular.woff2");
+}
+@font-face {
+  font-family: mainMedium;
+  src: url("../assets/fonts/OnService-Medium.woff2");
+}
+@font-face {
+  font-family: mainSemiBold;
+  src: url("../assets/fonts/OnService-SemiBold.woff2");
+}
+@font-face {
+  font-family: mainBold;
+  src: url("../assets/fonts/OnService-Bold.woff2");
+}
+
+body {
+  font-family: var(--font-mainMedium);
+  letter-spacing: 0.5px;
+}
+
+.os_container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.navLi {
+  position: relative;
+}
+.navLi::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 50px;
+  transform: scaleX(0);
+  background-color: var(--color-main);
+  bottom: -8px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.navLi:hover:before {
+  transform: scaleX(1);
+}
+.os_b {
+  height: 40px;
+  color: var(--color-buttonText);
+  background-color: var(--color-main);
+  border-radius: 5px;
+  padding: 0 20px;
+  font-family: var(--font-mainSemiBold);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.os_b:hover {
+  background-color: var(--color-mainHover);
+}
+.os_sb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: var(--color-main);
+  font-family: var(--font-mainSemiBold);
+  border-radius: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.os_sb::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 50px;
+  transform: scaleX(0);
+  background-color: var(--color-main);
+  bottom: -4px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.os_sb:hover:before {
+  transform: scaleX(1);
+}
+.no-select::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.os_underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.os_underline::before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 30px;
+  background-color: var(--color-main);
+  bottom: -12px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.caseUp {
+  font-feature-settings: "case";
+}
+@media (min-width: 768px) {
+  .os_container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .os_container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .os_container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .os_container {
+    width: 1370px;
+  }
+}
+@media (min-width: 1600px) {
+  .os_container {
+    width: 1570px;
+  }
+}
