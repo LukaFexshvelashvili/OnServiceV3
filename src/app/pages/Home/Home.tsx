@@ -1,3 +1,4 @@
+import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
 import StarterSection from "./components/StarterSection";
 
@@ -11,6 +12,8 @@ export default function Home() {
       <main className="min-h-[calc(100vh_-_var(--nav-height))]">
         <StarterSection />
         <ServicesSection />
+        <div className="os_fullLine"></div>
+        <ProjectsSection />
       </main>
     </>
   );

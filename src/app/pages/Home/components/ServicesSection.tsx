@@ -7,6 +7,7 @@ import {
   WebsiteIcon,
 } from "../../../../assets/icons/OS_icons";
 import SectionStarter from "../../../../components/SectionStarter";
+import SectionSeeMore from "./SectionSeeMore";
 
 export default function ServicesSection() {
   return (
@@ -40,6 +41,7 @@ export default function ServicesSection() {
             link="/"
           />
         </div>
+        <SectionSeeMore title="მეტის ნახვა" link="/services" />
       </div>
     </section>
   );

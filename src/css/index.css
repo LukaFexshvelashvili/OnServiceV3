@@ -63,6 +63,12 @@ body {
   font-family: var(--font-mainMedium);
   letter-spacing: 0.5px;
 }
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+}
 
 .os_container {
   padding-right: 15px;
@@ -87,6 +93,13 @@ body {
 .navLi:hover:before {
   transform: scaleX(1);
 }
+
+.os_fullLine {
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-lineColor);
+}
+
 .os_b {
   height: 40px;
   color: var(--color-buttonText);
@@ -137,7 +150,8 @@ body {
   left: 0;
   z-index: 1;
 }
-.os_underline {
+.os_underline,
+.os_underline_hover {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,6 +166,21 @@ body {
   bottom: -12px;
   border-radius: 5px;
   transition: transform 0.3s;
+}
+
+.os_underline_hover::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 30px;
+  transform: scaleX(0);
+  background-color: var(--color-main);
+  bottom: -12px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.os_underline_hover:hover:before {
+  transform: scaleX(1);
 }
 .caseUp {
   font-feature-settings: "case";
