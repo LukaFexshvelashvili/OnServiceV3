@@ -1,5 +1,6 @@
 import ProjectCard from "../../../../components/Cards/ProjectCard";
 import SectionStarter from "../../../../components/SectionStarter";
+import SectionSeeMore from "./SectionSeeMore";
 
 export default function ProjectsSection() {
   return (
@@ -10,6 +11,14 @@ export default function ProjectsSection() {
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
+      <div className="mt-12">
+        <SectionSeeMore title="მეტის ნახვა" link="/" />
       </div>
     </div>
   );

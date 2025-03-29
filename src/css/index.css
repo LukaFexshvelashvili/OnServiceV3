@@ -11,15 +11,19 @@
   --color-mainHover: #5499ff;
 
   --color-mainClear: rgba(64, 140, 253, 0.1);
+  --color-mainClearHover: rgba(64, 140, 253, 0.15);
   --color-mainLight: #45adff;
   --color-mainDark: #035fc6;
 
   --color-lineColor: rgba(0, 0, 0, 0.05);
   --color-circleColor: rgba(0, 0, 0, 0.1);
 
+  --color-black1: rgba(0, 0, 0, 0.01);
+
   --color-headDark90: #1a1a1a;
   --color-headDark80: #333333;
   --color-headDark60: #4d4d4d;
+  --color-headDark50: #555555;
   --color-headDark: #131313;
   --color-head: #707070;
 
@@ -30,6 +34,8 @@
   --color-navDesc: #606060;
 
   --color-white: #ffffff;
+  --color-whiteHover: rgba(255, 255, 255, 0.9);
+  --color-whiteClear: rgba(255, 255, 255, 0.1);
   --color-whiteDesc: rgba(255, 255, 255, 0.8);
   --color-whiteLow: rgba(255, 255, 255, 0.6);
   --color-white70: rgba(255, 255, 255, 0.7);
@@ -69,7 +75,10 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--color-main);
 }
-
+input,
+textarea {
+  outline: none;
+}
 .os_container {
   padding-right: 15px;
   padding-left: 15px;

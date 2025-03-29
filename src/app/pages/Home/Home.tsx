@@ -1,3 +1,4 @@
+import DigitalAdsSection from "./components/DigitalAdsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
 import StarterSection from "./components/StarterSection";
@@ -14,6 +15,8 @@ export default function Home() {
         <ServicesSection />
         <div className="os_fullLine"></div>
         <ProjectsSection />
+        <div className="os_fullLine"></div>
+        <DigitalAdsSection />
       </main>
     </>
   );

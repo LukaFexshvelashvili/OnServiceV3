@@ -9,12 +9,14 @@ import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
 import NotFound from "./pages/NotFound/NotFound";
+import ContactBlock from "../components/ContactBlock/ContactBlock";
 
 export default function App() {
   return (
     <>
       <Navbar />
       <AppRouter />
+      <ContactBlock />
       <Footer />
     </>
   );
