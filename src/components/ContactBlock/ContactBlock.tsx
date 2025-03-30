@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { EmailUsDecoration } from "../../assets/decorations/OS_decorations";
 import {
   CallIcon,
@@ -50,18 +51,30 @@ export function ContactCard() {
           <ContactDetail icon={CallIcon} title="+995 598 15 92 15" />
         </div>
         <div className="flex gap-3 items-center mt-5">
-          <button className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover">
+          <Link
+            to="facebook_link"
+            className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover"
+          >
             <FacebookIcon className="h-[20px]" />
-          </button>
-          <button className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover">
+          </Link>
+          <Link
+            to="instagram_link"
+            className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover"
+          >
             <InstagramIcon className="h-[20px]" />
-          </button>
-          <button className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover">
+          </Link>
+          <Link
+            to="whatsapp_link"
+            className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover"
+          >
             <WhatsappIcon className="h-[20px]" />
-          </button>
-          <button className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover">
+          </Link>
+          <Link
+            to="viber_link"
+            className="h-[38px] aspect-square flex justify-center items-center bg-white rounded-md cursor-pointer transition-colors hover:bg-whiteHover"
+          >
             <ViberIcon className="h-[20px]" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

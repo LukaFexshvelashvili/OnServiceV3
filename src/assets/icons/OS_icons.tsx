@@ -314,8 +314,6 @@ export const MailIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 export const RightArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    width="8"
-    height="15"
     viewBox="0 0 8 15"
     fill="none"
     {...props}
@@ -329,8 +327,6 @@ export const RightArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 export const LeftArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    width="8"
-    height="15"
     viewBox="0 0 8 15"
     fill="none"
     {...props}

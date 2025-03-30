@@ -1,3 +1,4 @@
+import PageLine from "../../../components/PageLine";
 import DigitalAdsSection from "./components/DigitalAdsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
@@ -13,9 +14,9 @@ export default function Home() {
       <main className="min-h-[calc(100vh_-_var(--nav-height))]">
         <StarterSection />
         <ServicesSection />
-        <div className="os_fullLine"></div>
+        <PageLine />
         <ProjectsSection />
-        <div className="os_fullLine"></div>
+        <PageLine />
         <DigitalAdsSection />
       </main>
     </>
