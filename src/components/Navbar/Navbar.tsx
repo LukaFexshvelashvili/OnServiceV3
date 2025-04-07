@@ -20,13 +20,15 @@ export default function Navbar() {
 
         <ul className="flex items-center gap-8 text-navDesc">
           <li className="cursor-pointer flex items-center justify-center navLi">
-            პროექტები
+            <Link to={"/projects"}>პროექტები</Link>
           </li>
           <li className="cursor-pointer flex items-center justify-center navLi">
-            სერვისები
+            {" "}
+            <Link to={"/services"}>სერვისები</Link>
           </li>
           <li className="cursor-pointer flex items-center justify-center navLi">
-            კონტაქტი
+            {" "}
+            <Link to={"/contact"}>კონტაქტი</Link>
           </li>
         </ul>
         <button className="flex items-center gap-3 bg-main rounded-md text-buttonText h-[40px] w-[180px]  justify-center cursor-pointer transition-colors hover:bg-mainHover">

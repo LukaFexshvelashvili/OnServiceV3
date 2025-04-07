@@ -27,7 +27,7 @@ export default function DigitalAdsSection() {
         </div>
       </div>
       <div className="flex-1 flex justify-end">
-        <LineChartDecoration className="max-h-[350px] w-auto" />
+        <LineChartDecoration className="max-h-[350px] w-auto mask_horizontal_fade" />
       </div>
     </div>
   );
