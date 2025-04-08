@@ -3,6 +3,7 @@ import {
   AdPrintIcon,
   DesignIcon,
   DoubleArrowIcon,
+  ServiceIcon,
   WebsiteIcon,
 } from "../../../../assets/icons/OS_icons";
 import SectionStarter from "../../../../components/SectionStarter";
@@ -39,6 +40,12 @@ export default function ServicesSection() {
             subtitle="რეკლამირება"
             link="/"
           />
+          <ServiceBlock
+            icon={ServiceIcon}
+            title="პერსონალური"
+            subtitle="მომსახურება"
+            link="/"
+          />
         </div>
         <SectionSeeMore title="მეტის ნახვა" link="/services" />
       </div>
@@ -53,9 +60,9 @@ function ServiceBlock(props: {
   link: string;
 }) {
   return (
-    <div className="relative overflow-hidden group flex flex-col gap-5 w-[200px] items-center p-5 rounded-md transition-shadow  bg-transparent cursor-pointer hover:shadow-[8px_8px_15px_#4059fd34]">
+    <div className="relative overflow-hidden group flex flex-col gap-5 w-[200px] items-center p-5 rounded-md transition-shadow  bg-transparent cursor-pointer hover:shadow-[8px_8px_15px_#4059fd34] group-hover:[&>svg]:bg-rose-900">
       <div className="absolute top-0 left-0 opacity-0 bg-gradient-to-br from-main to-purple duration-300 group-hover:opacity-100 transition-opacity h-full w-full z-0"></div>
-      <props.icon className="h-[60px]" />
+      <props.icon className="relative z-[2] h-[60px]" />
       <h2 className="relative group-hover:text-white text-[18px] text-headDark tracking-wider duration-300 font-mainSemiBold text-center transition-colors">
         {props.title}
         <span className=" text-headDark60 block group-hover:text-whiteDesc transition-colors duration-300">
@@ -64,10 +71,10 @@ function ServiceBlock(props: {
       </h2>
       <a
         href={props.link}
-        className="relative descLight caseUp inline-flex items-center gap-2 text-descLight  mt-1 duration-300 group-hover:text-whiteLow transition-colors"
+        className="relative descLight case_up inline-flex items-center gap-2 text-descLight  mt-1 duration-300 group-hover:text-white transition-colors"
       >
         შეუკვეთე{" "}
-        <DoubleArrowIcon className="[&>path]:stroke-descLight group-hover:[&>path]:stroke-whiteLow  [&>path]:transition-colors" />
+        <DoubleArrowIcon className="[&>path]:stroke-descLight group-hover:[&>path]:stroke-white  [&>path]:transition-colors" />
       </a>
     </div>
   );

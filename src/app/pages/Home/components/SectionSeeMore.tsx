@@ -5,7 +5,7 @@ export default function SectionSeeMore(props: { title: string; link: string }) {
     <div className="my-10 flex justify-center">
       <Link
         to={props.link}
-        className="caseUp text-main text-lg inline-block os_underline_hover font-mainSemiBold"
+        className="case_up text-main text-lg inline-block os_underline_hover font-mainSemiBold"
       >
         {props.title}
       </Link>

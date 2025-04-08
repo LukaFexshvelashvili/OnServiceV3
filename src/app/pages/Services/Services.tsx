@@ -27,7 +27,7 @@ export default function Services() {
           </>
         }
         previewImage={
-          <LineChartDecoration className="max-h-[300px] w-auto mask_horizontal_fade" />
+          <LineChartDecoration className="max-h-[350px] w-auto mask_horizontal_fade" />
         }
         subtitle="ჩვენ დაგეხმარებით განათავსოთ რეკლამები თანამედროვე ციფრულ პლატფორმებზე, რათა მაქსიმალურად შევძლოთ თქვენი ბიზნესის განვითარება"
         link="/digital_advertising"
@@ -63,7 +63,7 @@ export default function Services() {
           />
         }
         subtitle="ჩვენ შეგვიძლია დაგიმზადოთ დიზაინი თქვენი მოთხოვნების შესაბამისად თანამედროვე პროგრამის Figma-ს გამოყენებით"
-        link="/desing_making"
+        link="/design_making"
         right
       />
       <SeviceBlock

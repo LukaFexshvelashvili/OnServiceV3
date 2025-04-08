@@ -31,10 +31,13 @@ export default function Navbar() {
             <Link to={"/contact"}>კონტაქტი</Link>
           </li>
         </ul>
-        <button className="flex items-center gap-3 bg-main rounded-md text-buttonText h-[40px] w-[180px]  justify-center cursor-pointer transition-colors hover:bg-mainHover">
+        <Link
+          to={"tel:+995 598 15 92 15"}
+          className="flex items-center gap-3 bg-main rounded-md text-buttonText h-[40px] w-[180px]  justify-center cursor-pointer transition-colors hover:bg-mainHover"
+        >
           <CallIcon height={18} width={18} />
           დაგვირეკე
-        </button>
+        </Link>
       </div>
     </nav>
   );

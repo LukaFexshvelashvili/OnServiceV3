@@ -28,7 +28,7 @@ export default function SeviceBlock({
             right ? "flex-end text-end items-end" : "items-start"
           } `}
         >
-          <h2 className=" caseUp text-headDark text-[24px] font-mainSemiBold tracking-wider">
+          <h2 className=" case_up text-headDark text-[24px] font-mainSemiBold tracking-wider">
             {title}
           </h2>
           <p className="text-descDark text-[16px] font-mainMedium leading-7">
@@ -50,7 +50,7 @@ export default function SeviceBlock({
 
           <a
             href={link}
-            className={`inline-flex items-center gap-2 caseUp text-main mt-4  ${
+            className={`inline-flex items-center gap-2 case_up text-main mt-4  ${
               right && "flex-row-reverse"
             }`}
           >

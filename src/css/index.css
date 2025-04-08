@@ -88,6 +88,10 @@ body {
 *::-webkit-scrollbar {
   width: 6px;
 }
+*::selection {
+  background: var(--color-main);
+  color: var(--color-white);
+}
 *::-webkit-scrollbar-thumb {
   background-color: var(--color-main);
 }
@@ -207,7 +211,7 @@ textarea {
 .os_underline_hover:hover:before {
   transform: scaleX(1);
 }
-.caseUp {
+.case_up {
   font-feature-settings: "case";
 }
 @media (min-width: 768px) {

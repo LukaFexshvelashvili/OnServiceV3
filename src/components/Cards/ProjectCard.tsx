@@ -4,7 +4,7 @@ import { DoubleArrowIcon } from "../../assets/icons/OS_icons";
 export default function ProjectCard() {
   return (
     <div className="relative w-[420px] h-[450px] rounded-md outline-2 outline-lineColor p-5 flex flex-col gap-3 pt-8 items-center overflow-hidden">
-      <div className="absolute top-0 left-0 bg-rose-600 h-[32px] w-[140px] z-10 caseUp font-mainMedium flex justify-center items-center text-[14px] text-white">
+      <div className="absolute top-0 left-0 bg-rose-600 h-[32px] w-[140px] z-10 case_up font-mainMedium flex justify-center items-center text-[14px] text-white">
         ვებგვერდი
       </div>
       <div className="h-[220px]">
@@ -21,7 +21,7 @@ export default function ProjectCard() {
         ფილმების სერიალების ანიმაციების და ანიმეების პლატფორმა
       </p>
       <Link
-        className="text-rose-600 caseUp font-mainSemiBold inline-flex gap-2 items-center mt-auto ml-auto"
+        className="text-rose-600 case_up font-mainSemiBold inline-flex gap-2 items-center mt-auto ml-auto"
         to={"/"}
       >
         ნახვა

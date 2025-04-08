@@ -47,8 +47,16 @@ export function ContactCard() {
       <div className=" h-full w-2/4 bg-gradient-to-r from-main to-purple flex flex-col justify-center items-center gap-5">
         <EmailUsDecoration className="h-[180px]" />
         <div className="flex flex-col gap-4">
-          <ContactDetail icon={MailIcon} title="contact@onservice.ge" />
-          <ContactDetail icon={CallIcon} title="+995 598 15 92 15" />
+          <ContactDetail
+            icon={MailIcon}
+            title="contact@onservice.ge"
+            link="mailto:contact@onservice.ge"
+          />
+          <ContactDetail
+            icon={CallIcon}
+            title="+995 598 15 92 15"
+            link="tel:+995 598 15 92 15"
+          />
         </div>
         <div className="flex gap-3 items-center mt-5">
           <Link
@@ -100,15 +108,19 @@ function ContactInput(props: {
     ></input>
   );
 }
-function ContactDetail(props: { title: string; icon: React.ElementType }) {
+function ContactDetail(props: {
+  title: string;
+  icon: React.ElementType;
+  link: string;
+}) {
   return (
-    <div className="flex items-center gap-3">
+    <Link to={props.link} className="flex items-center gap-3">
       <div className=" h-[40px] aspect-square rounded-[50%] flex justify-center items-center bg-whiteClear">
         <props.icon className="w-[20px] h-[19px]" />
       </div>
       <p className="text-white70 tracking-wider font-mainMedium">
         {props.title}
       </p>
-    </div>
+    </Link>
   );
 }

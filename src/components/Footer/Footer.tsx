@@ -52,7 +52,10 @@ export default function Footer() {
               >
                 contact@onservice.ge
               </Link>
-              <Link className="text-desc leading-6.5" to="tel:+995598159215">
+              <Link
+                className="text-desc leading-6.5"
+                to="tel:+995 598 15 92 15"
+              >
                 +995 598 15 92 15
               </Link>
             </div>

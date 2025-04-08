@@ -28,7 +28,7 @@ export default function Project() {
         </div>
         <PageLine />
         <div className="os_container py-8">
-          <h3 className="flex flex-col font-mainSemiBold text-head text-2xl caseUp">
+          <h3 className="flex flex-col font-mainSemiBold text-head text-2xl case_up">
             <span className="text-main">სხვა</span>
             პროექტები
           </h3>
@@ -45,7 +45,7 @@ export default function Project() {
 
 export function ProjectAddon(props: { title: string }) {
   return (
-    <div className="h-[36px] rounded-sm outline outline-lineColor px-6 text-sm flex items-center gap-3 font-mainSemiBold caseUp text-rose-700 cursor-pointer hover:bg-rose-50  hover:outline-2 hover:outline-rose-700  transition-colors">
+    <div className="h-[36px] rounded-sm outline outline-lineColor px-6 text-sm flex items-center gap-3 font-mainSemiBold case_up text-rose-700 cursor-pointer hover:bg-rose-50  hover:outline-2 hover:outline-rose-700  transition-colors">
       <div className="flex items-center gap-1.5">{props.title}</div>
     </div>
   );
