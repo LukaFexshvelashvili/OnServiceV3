@@ -25,7 +25,7 @@
   --color-headDark60: #4d4d4d;
   --color-headDark50: #555555;
   --color-headDark: #131313;
-  --color-head: #707070;
+  --color-head: #5e5e5e;
 
   --color-descDark: rgb(58, 58, 58);
   --color-desc: #8c8c8c;
@@ -135,7 +135,7 @@ textarea {
   background-color: var(--color-main);
   border-radius: 5px;
   padding: 0 20px;
-  font-family: var(--font-mainSemiBold);
+  font-family: var(--font-mainMedium);
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -149,7 +149,7 @@ textarea {
   align-items: center;
   height: 40px;
   color: var(--color-main);
-  font-family: var(--font-mainSemiBold);
+  font-family: var(--font-mainMedium);
   border-radius: 5px;
   padding: 0 15px;
   cursor: pointer;
@@ -189,7 +189,7 @@ textarea {
 .os_underline::before {
   position: absolute;
   content: "";
-  height: 4px;
+  height: 3px;
   width: 30px;
   background-color: var(--color-main);
   bottom: -12px;
