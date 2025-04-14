@@ -8,9 +8,9 @@ export default function Navbar() {
         <div className="flex items-center gap-5">
           <Link
             to={"/"}
-            className="flex items-center gap-3 font-mainBold text-main text-lg tracking-wider cursor-pointer"
+            className="flex items-center gap-3 font-mainBold text-main text-md tracking-wider cursor-pointer"
           >
-            <LogoIcon height={26} width={26} />
+            <LogoIcon height={22} width={22} />
             <p>ონ სერვისი</p>
           </Link>
           <div className="h-5 aspect-square rounded-3xl bg-transparent outline-2 outline-main p-[2px] cursor-pointer">
@@ -33,7 +33,7 @@ export default function Navbar() {
         </ul>
         <Link
           to={"tel:+995 598 15 92 15"}
-          className="flex items-center gap-3 bg-main rounded-md text-buttonText h-[40px] w-[180px]  justify-center cursor-pointer transition-colors hover:bg-mainHover"
+          className="flex items-center gap-2 bg-main rounded-md text-buttonText h-[36px] w-[160px] text-sm justify-center cursor-pointer transition-colors hover:bg-mainHover"
         >
           <CallIcon height={18} width={18} />
           დაგვირეკე

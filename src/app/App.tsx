@@ -3,7 +3,6 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import WebDeveloping from "./pages/WebDeveloping/WebDeveloping";
-import AdMaking from "./pages/AdMaking/AdMaking";
 import Design from "./pages/Design/Design";
 import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
@@ -11,6 +10,7 @@ import Projects from "./pages/Projects/Projects";
 import NotFound from "./pages/NotFound/NotFound";
 import ContactBlock from "../components/ContactBlock/ContactBlock";
 import Project from "./pages/Project/Project";
+import AdsPrinting from "./pages/AdsPrinting/AdsPrinting";
 
 export default function App() {
   return (
@@ -33,7 +33,7 @@ function AppRouter() {
         <Route path="projects" element={<Projects />} />
         <Route path="contact" element={<Contact />} />
         <Route path="website_development" element={<WebDeveloping />} />
-        <Route path="ad_making" element={<AdMaking />} />
+        <Route path="advertisement_printing" element={<AdsPrinting />} />
         <Route path="design" element={<Design />} />
         <Route path="*" element={<NotFound />} />
       </Route>
