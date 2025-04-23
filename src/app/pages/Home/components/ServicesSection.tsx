@@ -11,7 +11,13 @@ import SectionSeeMore from "./SectionSeeMore";
 
 export default function ServicesSection() {
   return (
-    <section>
+    <section className=" relative overflow-hidden flex items-center">
+      <div className="absolute z-0 top-0 left-15  flex justify-between no-select">
+        <img src="images/dots/dots.png" className="h-[220px]" />
+      </div>
+      <div className="absolute z-0 bottom-5 right-15  flex justify-between no-select">
+        <img src="images/dots/dots.png" className="h-[220px]" />
+      </div>
       <div className="os_container">
         <SectionStarter title="სერვისები" />
 

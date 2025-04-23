@@ -3,15 +3,9 @@ import {
   AbraIcon,
   BannerIcon,
   BusinessCardIcon,
-  ControlIcon,
   PosterIcon,
-  SecurityIcon,
-  SeoIcon,
-  SettingsIcon,
-  SpeedIcon,
   TitleIcon,
   TruckIcon,
-  WebsiteIcon,
 } from "../../../assets/icons/OS_icons";
 import PageLine from "../../../components/PageLine";
 import SectionStarter from "../../../components/SectionStarter";
@@ -22,9 +16,17 @@ export default function AdPrinting() {
     document.documentElement.style.setProperty("--color-main", "#F69000");
     document.documentElement.style.setProperty("--color-mainHover", "#e68600");
     document.documentElement.style.setProperty("--color-purple", "#f0a400");
+    return () => {
+      document.documentElement.style.removeProperty("--color-main");
+      document.documentElement.style.removeProperty("--color-mainHover");
+      document.documentElement.style.removeProperty("--color-purple");
+    };
   }, []);
   return (
-    <main>
+    <main className=" relative overflow-hidden ">
+      <div className="absolute z-0 top-5 left-5  flex justify-between no-select">
+        <img src="images/dots/dots_fade_bottom.png" className="h-[200px]" />
+      </div>
       <div className="os_container ">
         <div className="w-full flex justify-between py-16 items-center">
           <div className="w-[330px]">
@@ -56,7 +58,13 @@ export default function AdPrinting() {
       </div>
       <PageLine />
 
-      <section className="py-5">
+      <section className="py-5 relative overflow-hidden">
+        <div className="absolute z-0 bottom-10 left-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_right.png" className="h-[220px]" />
+        </div>
+        <div className="absolute z-0 top-10 right-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_left.png" className="h-[220px]" />
+        </div>
         <div className="os_container">
           <SectionStarter title="სერვისები" line />
           <div className="flex justify-between py-17">
@@ -79,7 +87,10 @@ export default function AdPrinting() {
       </section>
       <PageLine />
 
-      <section className="py-5">
+      <section className="py-5 relative">
+        <div className="absolute z-0 top-2/4 right-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_left.png" className="h-[220px]" />
+        </div>
         <div className="os_container">
           <SectionStarter
             coloredTitle="ყველაფერი "

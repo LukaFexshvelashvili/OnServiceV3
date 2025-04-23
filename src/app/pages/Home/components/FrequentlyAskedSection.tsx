@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function FrequentlyAskedSection() {
   return (
-    <section>
+    <section className="relative overflow-hidden">
       {" "}
       <div className="my-10 flex flex-col items-center text-center gap-4">
         <h2
@@ -13,7 +13,7 @@ export default function FrequentlyAskedSection() {
           ხშირად დასმული <span className="text-main">კითხვები</span>
         </h2>
       </div>
-      <div className="os_container pb-14">
+      <div className="os_container pb-14 relative z-10">
         <div className="flex flex-col gap-6">
           <Question
             title="რამდენ ხანში ხდება პროდუქტის ჩაბარება?"
@@ -65,6 +65,9 @@ export default function FrequentlyAskedSection() {
           />
         </div>
       </div>
+      <div className="absolute bottom-10 right-10 z-0 flex justify-between no-select">
+        <img src="images/dots/dots.png" className="h-[220px]" />
+      </div>
     </section>
   );
 }
@@ -73,7 +76,7 @@ function Question(props: { title: string; answer: React.ReactNode }) {
   const [show, setshow] = useState(false);
   return (
     <div
-      className={`flex flex-col max-h-max  ${
+      className={`flex flex-col max-h-max bg-bodyBg ${
         show ? "h-[200px]" : "h-[60px]"
       } w-full rounded-lg outline-2 outline-lineColor transition-[height] duration-300 text-[17px] cursor-pointer overflow-hidden select-none`}
       onClick={() => setshow((state) => !state)}

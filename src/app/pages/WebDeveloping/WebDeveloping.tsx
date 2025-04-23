@@ -12,7 +12,10 @@ import SectionStarter from "../../../components/SectionStarter";
 
 export default function WebDeveloping() {
   return (
-    <main>
+    <main className=" relative overflow-hidden ">
+      <div className="absolute z-0 top-5 left-5  flex justify-between no-select">
+        <img src="images/dots/dots_fade_bottom.png" className="h-[200px]" />
+      </div>
       <div className="os_container ">
         <div className="w-full flex justify-between py-16 items-center">
           <div className="w-[330px]">
@@ -45,7 +48,13 @@ export default function WebDeveloping() {
       </div>
       <PageLine />
 
-      <section className="py-5">
+      <section className="py-5 relative overflow-hidden">
+        <div className="absolute z-0 bottom-10 left-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_right.png" className="h-[220px]" />
+        </div>
+        <div className="absolute z-0 top-10 right-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_left.png" className="h-[220px]" />
+        </div>
         <div className="os_container">
           <SectionStarter title="სერვისები" line />
           <div className="grid grid-cols-3 gap-y-10 justify-items-center items-start py-14">
@@ -90,7 +99,10 @@ export default function WebDeveloping() {
       </section>
       <PageLine />
 
-      <section className="py-5">
+      <section className="py-5 relative">
+        <div className="absolute z-0 top-2/4 right-5  flex justify-between no-select">
+          <img src="images/dots/dots_fade_left.png" className="h-[220px]" />
+        </div>
         <div className="os_container">
           <SectionStarter
             coloredTitle="ყველაფერი "

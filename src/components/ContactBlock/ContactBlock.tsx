@@ -21,6 +21,10 @@ export default function ContactBlock() {
       <div className="os_container relative flex flex-col items-center">
         <ContactCard />
       </div>
+
+      <div className="absolute bottom-10 left-10 z-0 flex justify-between no-select">
+        <img src="images/dots/dots_fade_right.png" className="h-[220px]" />
+      </div>
     </div>
   );
 }

@@ -4,10 +4,13 @@ import PageLine from "../../../components/PageLine";
 
 export default function Project() {
   return (
-    <>
-      <title>- OnService პროექტი</title>
+    <section className=" relative overflow-hidden ">
+      <div className="absolute z-0 top-10 left-5  flex justify-between no-select">
+        <img src="images/dots/dots_fade_right.png" className="h-[220px]" />
+      </div>
+      <title>[PROJECT_TITLE] - OnService პროექტი</title>
       <main>
-        <div className="os_container flex  py-20">
+        <div className="os_container flex items-center py-20">
           <div className="flex-1 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl font-mainBold tracking-wider text-headDark80">
@@ -27,19 +30,25 @@ export default function Project() {
           </div>
         </div>
         <PageLine />
-        <div className="os_container py-8">
-          <h3 className="flex flex-col font-mainSemiBold text-head text-2xl case_up">
-            <span className="text-main">სხვა</span>
-            პროექტები
-          </h3>
-          <div className="flex gap-15 justify-center py-12 ">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+        <section className="relative overflow-hidden">
+          <div className="absolute z-0 top-10 right-5  flex justify-between no-select">
+            <img src="images/dots/dots_fade_left.png" className="h-[220px]" />
           </div>
-        </div>
+          <div className="os_container py-8  ">
+            <h3 className="flex flex-col font-mainSemiBold text-head text-[22px] case_up">
+              <span className="text-rose-700">სხვა</span>
+              პროექტები
+            </h3>
+
+            <div className="flex gap-15 justify-center py-12 ">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+          </div>
+        </section>
       </main>
-    </>
+    </section>
   );
 }
 

@@ -2,7 +2,7 @@ import { LineChartDecoration } from "../../../../assets/decorations/OS_decoratio
 
 export default function DigitalAdsSection() {
   return (
-    <div className="os_container flex items-center py-20">
+    <div className="os_container flex items-center py-20 relative">
       <div className="flex-1">
         <div className="flex flex-col gap-5">
           <h2 className="text-headDark90 font-mainBold text-[26px] tracking-wide">
@@ -12,7 +12,7 @@ export default function DigitalAdsSection() {
             ჩვენ დაგეხმარებით განათავსოთ რეკლამები თანამედროვე ციფრულ
             პლატფორმებზე, რათა მაქსიმალურად შევძლოთ თქვენი ბიზნესის განვითარება
           </p>
-          <div className="mt-5 flex gap-5">
+          <div className="mt-2 flex gap-5">
             <DigitalAdBlock
               image="images/digital/google_ads.png"
               title="Google"
@@ -22,6 +22,12 @@ export default function DigitalAdsSection() {
             <DigitalAdBlock
               image="images/digital/youtube.png"
               title="Youtube"
+            />
+          </div>
+          <div className="mt-2 z-0 relative left-0flex justify-between no-select">
+            <img
+              src="images/dots/dots_fade_right_horizontal.png"
+              className="w-[260px] object-cover"
             />
           </div>
         </div>

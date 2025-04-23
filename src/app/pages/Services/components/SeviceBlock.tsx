@@ -7,6 +7,8 @@ type TServiceBlock = {
   list?: string[];
   previewImage: React.ReactNode;
   right?: boolean;
+  outsideDesign?: React.ReactNode;
+  insideDesign?: React.ReactNode;
 };
 export default function SeviceBlock({
   title,
@@ -15,16 +17,21 @@ export default function SeviceBlock({
   list,
   previewImage,
   right,
+  outsideDesign,
+  insideDesign,
 }: TServiceBlock) {
   return (
-    <section className="py-8">
+    <section className="py-8 relative">
+      {outsideDesign}
       <div
-        className={`os_container flex justify-between items-center ${
+        className={`os_container flex justify-between relative items-center ${
           right && "flex-row-reverse"
         } `}
       >
+        {insideDesign}
+
         <div
-          className={`flex-1 flex flex-col gap-3  ${
+          className={`flex-1 flex flex-col gap-3 relative ${
             right ? "flex-end text-end items-end" : "items-start"
           } `}
         >
@@ -59,7 +66,9 @@ export default function SeviceBlock({
           </a>
         </div>
         <div
-          className={`flex-1 flex ${right ? "justify-start" : "justify-end"} `}
+          className={`flex-1 relative flex ${
+            right ? "justify-start" : "justify-end"
+          } `}
         >
           {previewImage}
         </div>

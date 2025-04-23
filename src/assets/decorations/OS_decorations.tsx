@@ -1442,3 +1442,86 @@ export const EmailUsDecoration = (props: React.SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+export const LineStartDecoration = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    width="912"
+    height="258"
+    viewBox="0 0 912 258"
+    {...props}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.49969 -66C-55.5002 235.35 496.5 291 909 235.35"
+      stroke="black"
+      stroke-opacity="0.05"
+      stroke-width="6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-dasharray="15 15"
+    />
+  </svg>
+);
+export const LineStartRightDecoration = (
+  props: React.SVGProps<SVGSVGElement>
+) => (
+  <svg
+    width="211"
+    height="343"
+    viewBox="0 0 211 343"
+    {...props}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 13.5C214.432 -54.8311 -28.362 234.275 317 339.35"
+      stroke="black"
+      stroke-opacity="0.05"
+      stroke-width="6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-dasharray="15 15"
+    />
+  </svg>
+);
+export const LineDecorationConsultation = (
+  props: React.SVGProps<SVGSVGElement>
+) => (
+  <svg
+    width="1200"
+    height="295"
+    viewBox="0 0 1281 295"
+    {...props}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4.5 285.5C304 346.5 733 -155 1276.5 57.5"
+      stroke="black"
+      stroke-opacity="0.05"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-dasharray="18 18"
+    />
+  </svg>
+);
+
+export const LineDecorationPanel = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    width="1194"
+    height="273"
+    viewBox="0 0 1194 273"
+    {...props}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1189.5 203.5C786.5 457.5 200.5 -121.5 -44 30.4998"
+      stroke="black"
+      stroke-opacity="0.05"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-dasharray="16 16"
+    />
+  </svg>
+);

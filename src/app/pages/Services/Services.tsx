@@ -1,9 +1,16 @@
-import { LineChartDecoration } from "../../../assets/decorations/OS_decorations";
+import {
+  LineChartDecoration,
+  LineDecorationConsultation,
+  LineDecorationPanel,
+} from "../../../assets/decorations/OS_decorations";
 import SeviceBlock from "./components/SeviceBlock";
 
 export default function Services() {
   return (
-    <main className="py-10 flex flex-col gap-10">
+    <main className="py-10 flex flex-col gap-10 relative overflow-hidden">
+      <div className="absolute z-0 top-5 left-5  flex justify-between no-select">
+        <img src="images/dots/dots_fade_bottom.png" className="h-[200px]" />
+      </div>
       <SeviceBlock
         title={
           <>
@@ -34,6 +41,15 @@ export default function Services() {
         right
       />
       <SeviceBlock
+        outsideDesign={
+          <LineDecorationConsultation className="absolute left-0 z-0" />
+        }
+        insideDesign={
+          <img
+            src="images/dots/dots_fade_left.png"
+            className="absolute right-0 z-0 h-full max-h-[340px]"
+          />
+        }
         title={
           <>
             <span className="text-main">პერსონალური</span> მომსახურება
@@ -42,7 +58,7 @@ export default function Services() {
         previewImage={
           <img
             src="images/services/consultation.png"
-            className="max-h-[300px]"
+            className="max-h-[340px]"
             alt="კონსულტაცია"
           />
         }
@@ -60,6 +76,12 @@ export default function Services() {
             src="images/services/design_making.png"
             className="max-h-[300px] shadow-xl"
             alt="დიზაინის დამზადება"
+          />
+        }
+        outsideDesign={
+          <img
+            src="images/dots/dots.png"
+            className="absolute right-0 z-0 h-[250px] opacity-50 left-2/4 bottom-0 translate-x-[-20%] translate-y-[50%]"
           />
         }
         subtitle="ჩვენ შეგვიძლია დაგიმზადოთ დიზაინი თქვენი მოთხოვნების შესაბამისად თანამედროვე პროგრამის Figma-ს გამოყენებით"
@@ -94,6 +116,12 @@ export default function Services() {
             <span className="text-main">რეკლამის</span> დაბეჭდვა / გაკვრა
           </>
         }
+        insideDesign={
+          <img
+            src="images/dots/dots_center_faded.png"
+            className="absolute right-0 z-0 h-[350px] opacity-50 left-2/4 translate-x-[-50%]"
+          />
+        }
         previewImage={
           <img
             src="images/services/ad_printing.png"
@@ -111,6 +139,7 @@ export default function Services() {
             <span className="text-main">ONSERVICE</span> კონტროლ პანელი
           </>
         }
+        outsideDesign={<LineDecorationPanel className="absolute left-0 z-0" />}
         previewImage={
           <img
             src="images/services/control_panel.png"
