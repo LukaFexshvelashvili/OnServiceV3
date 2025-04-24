@@ -8,7 +8,7 @@ export default function FrequentlyAskedSection() {
       {" "}
       <div className="my-10 flex flex-col items-center text-center gap-4">
         <h2
-          className={`text-head text-center text-[26px] font-mainBold tracking-wide`}
+          className={`text-head text-center text-[26px] font-mainBold tracking-wide max-992:text-[24px] max-600:text-[22px] max-600:px-2`}
         >
           ხშირად დასმული <span className="text-main">კითხვები</span>
         </h2>
@@ -77,24 +77,30 @@ function Question(props: { title: string; answer: React.ReactNode }) {
   return (
     <div
       className={`flex flex-col max-h-max bg-bodyBg ${
-        show ? "h-[200px]" : "h-[60px]"
-      } w-full rounded-lg outline-2 outline-lineColor transition-[height] duration-300 text-[17px] cursor-pointer overflow-hidden select-none`}
+        show
+          ? "h-[200px] max-992:h-[300px] max-600:h-[400px]"
+          : "h-[60px] max-992:h-[65px]"
+      } w-full rounded-lg outline-2 outline-lineColor transition-[height] duration-300 text-[17px] max-992:text-[15px] max-600:text-[14px]  cursor-pointer overflow-hidden select-none`}
       onClick={() => setshow((state) => !state)}
     >
       <div
-        className={`h-[60px] shrink-0 px-5 flex items-center ${
+        className={`h-[60px] max-992:h-[65px] max-600:h-[70px] shrink-0 px-5 max-600:px-3.5 flex items-center ${
           show ? "text-main" : "text-desc"
-        } text-desc font-mainSemiBold transition-colors tracking-wider justify-between `}
+        } text-desc font-mainSemiBold  transition-colors tracking-wider justify-between `}
       >
         {" "}
-        {props.title}
+        <p className="line-clamp-2 text-ellipsis overflow-hidden">
+          {props.title}
+        </p>
         <DownArrowIcon
           height={10}
-          className={`${show ? "rotate-180" : "rotate-0"} transition-transform`}
+          className={`${
+            show ? "rotate-180" : "rotate-0"
+          } transition-transform max-600:h-3 aspect-square shrink-0`}
         />
       </div>
       <div className="h-[2px] w-full bg-lineColor shrink-0"></div>
-      <div className="text-descDark leading-8 font-mainSemiBold tracking-wider py-3 px-5">
+      <div className="text-descDark leading-8 font-mainSemiBold max-992:text-[15px] max-992:leading-7 tracking-wider py-3 px-5">
         {props.answer}
       </div>
     </div>

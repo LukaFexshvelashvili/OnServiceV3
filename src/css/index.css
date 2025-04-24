@@ -46,7 +46,12 @@
   --font-mainBold: "mainBold";
 
   --nav-height: 60px;
+
+  --breakpoint-1200: 1200px;
+  --breakpoint-992: 992px;
+  --breakpoint-600: 600px;
 }
+
 .mask_horizontal_fade {
   mask-image: linear-gradient(
     to right,
@@ -214,6 +219,35 @@ textarea {
 .case_up {
   font-feature-settings: "case";
 }
+.os_loader {
+  -webkit-animation: cssload-spin 4.6s ease infinite;
+  animation: cssload-spin 4.6s ease infinite;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0);
+}
+@keyframes cssload-spin {
+  0%,
+  to {
+    box-shadow: 20px 16px white, -20px -16px white;
+  }
+  25% {
+    box-shadow: 20px -16px white, -20px 16px white;
+  }
+  50% {
+    box-shadow: 20px 16px white, -35px -16px white;
+  }
+  75% {
+    box-shadow: 35px -16px white, -20px 16px white;
+  }
+}
 @media (min-width: 768px) {
   .os_container {
     width: 750px;
@@ -237,5 +271,25 @@ textarea {
 @media (min-width: 1600px) {
   .os_container {
     width: 1570px;
+  }
+}
+
+@media (max-width: 600px) {
+  .os_container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .os_b {
+    height: 38px;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 15px;
+  }
+  .os_sb {
+    height: 38px;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 15px;
   }
 }

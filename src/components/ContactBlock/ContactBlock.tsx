@@ -31,24 +31,24 @@ export default function ContactBlock() {
 
 export function ContactCard() {
   return (
-    <div className="max-w-[1200px] w-full h-[450px] bg-white rounded-xl shadow-[0px_4px_30px_rgba(215,_215,_215,_0.25)] flex overflow-hidden">
-      <div className=" p-4 px-6 w-2/4 flex flex-col justify-center">
-        <h3 className="text-headDark60 font-mainBold text-[20px] tracking-wide">
+    <div className="max-992:flex-col max-992:h-auto relative z-10 max-w-[1200px] w-full h-[450px] bg-white rounded-xl shadow-[0px_4px_30px_rgba(215,_215,_215,_0.25)] flex overflow-hidden">
+      <div className=" p-4 px-6 w-2/4 max-992:px-4 max-992:py-3 flex flex-col justify-center max-992:w-full">
+        <h3 className="text-headDark60 font-mainBold text-[20px] max-600:text-[18px] tracking-wide max-600:text-center">
           <span className="text-main">და</span>გვიკავშირდით
         </h3>
-        <p className="text-desc font-mainMedium text-[18px] tracking-wide mt-2">
+        <p className="text-desc font-mainMedium text-[18px] tracking-wide mt-2 max-600:text-[16px] max-600:text-center">
           ჩვენ დაგეხმარებით განავითაროთ თქვენი ბიზნესი
         </p>
-        <form className="flex flex-col gap-4 mt-6">
+        <form className="flex flex-col gap-4 mt-6 max-600:gap-3 max-600:mt-4">
           <ContactInput name="name" placeholder="სახელი" />
           <ContactInput name="email" placeholder="მეილი" />
           <ContactInput name="message" placeholder="შეტყობინება" long />
-          <button className="w-full bg-gradient-to-r from-main to-purple h-[50px] tracking-wider rounded-lg text-white font-mainSemiBold cursor-pointer transition-opacity hover:opacity-90">
+          <button className="w-full bg-gradient-to-r from-main to-purple h-[50px] max-600:h-[45px] tracking-wider rounded-lg text-white font-mainSemiBold cursor-pointer transition-opacity hover:opacity-90">
             გაგზავნა
           </button>
         </form>
       </div>
-      <div className=" h-full w-2/4 bg-gradient-to-r from-main to-purple flex flex-col justify-center items-center gap-5">
+      <div className="max-992:w-full max-992:py-8  h-full w-2/4 bg-gradient-to-r from-main to-purple flex flex-col justify-center items-center gap-5">
         <EmailUsDecoration className="h-[180px]" />
         <div className="flex flex-col gap-4">
           <ContactDetail
@@ -106,7 +106,7 @@ function ContactInput(props: {
     ></textarea>
   ) : (
     <input
-      className="w-full h-[50px] bg-mainClear font-mainSemiBold text-main px-5 rounded-lg tracking-wider focus:bg-mainClearHover transition-colors"
+      className="w-full h-[50px] max-600:h-[45px] bg-mainClear font-mainSemiBold text-main px-5 rounded-lg tracking-wider focus:bg-mainClearHover transition-colors"
       placeholder={props.placeholder}
       name={props.name}
     ></input>

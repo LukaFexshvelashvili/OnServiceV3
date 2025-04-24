@@ -13,18 +13,16 @@ export default function Home() {
         ციფრული სერვისები - ვებგვერდის დამზადება, დიზაინის დამზადება,
         გარეკლამება
       </title>
-      <main className="min-h-[calc(100vh_-_var(--nav-height))]">
-        <StarterSection />
-        <ServicesSection />
-        <PageLine />
-        <ProjectsSection />
-        <PageLine />
-        <DigitalAdsSection />
-        <PageLine />
-        <ControlPanelSection />
-        <PageLine />
-        <FrequentlyAskedSection />
-      </main>
+      <StarterSection />
+      <ServicesSection />
+      <PageLine />
+      <ProjectsSection />
+      <PageLine />
+      <DigitalAdsSection />
+      <PageLine />
+      <ControlPanelSection />
+      <PageLine />
+      <FrequentlyAskedSection />
     </>
   );
 }

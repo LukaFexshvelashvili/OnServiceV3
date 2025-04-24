@@ -42,16 +42,18 @@ export default function OS_Slider() {
   };
 
   return (
-    <div className="relative w-full h-[450px] flex items-center justify-center">
-      <div className="relative w-[90%] h-[90%] flex justify-start overflow-hidden">
+    <div className="relative w-full  h-[450px] max-1200:h-[350px] max-600:h-[280px] flex items-center justify-center">
+      <div className="relative w-[90%] h-[90%] max-992:w-[calc(100%-40px)] flex justify-start overflow-hidden">
         {items.map((_, i) => (
           <div
-            className={`w-full min-w-full absolute h-full flex justify-center transition-[opacity,visibility] ${
+            className={`w-full overflow-hidden min-w-full absolute h-full flex justify-center items-center transition-[opacity,visibility] ${
               activeIndex == i ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           >
             <img
-              className={"max-w-full max-h-full object-cover"}
+              className={
+                "max-w-full max-h-full w-full h-auto object-contain max-992:h-full max-992:w-full"
+              }
               src={items[i].image}
               loading={activeIndex == i ? "eager" : "lazy"}
               alt={items[i].alt}
@@ -61,7 +63,7 @@ export default function OS_Slider() {
       </div>
       <button
         onClick={sliderLeft}
-        className={`h-[46px] aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == 0
             ? "bg-mainClear hover:bg-mainClearHover"
             : "bg-main hover:bg-mainHover"
@@ -75,7 +77,7 @@ export default function OS_Slider() {
       </button>
       <button
         onClick={sliderRight}
-        className={`h-[46px] aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == items.length - 1
             ? "bg-mainClear hover:bg-mainClearHover"
             : "bg-main hover:bg-mainHover"

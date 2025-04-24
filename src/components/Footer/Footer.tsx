@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="mt-5 border-t border-lineColor">
       <div className="os_container py-8">
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-3 max-w-[300px]">
+        <div className="flex justify-between max-992:flex-col max-992:gap-8">
+          <div className="flex flex-col gap-3 max-w-[300px] max-992:max-w-none">
             {" "}
             <Link
               to={"/"}
@@ -82,8 +82,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center p-4 pt-1">
-        <div className="flex items-center gap-8">
+      <div className="flex justify-between items-center p-4 pt-1 max-992:flex-col max-992:gap-4">
+        <div className="flex items-center gap-8 ">
           <Link className="text-sm text-desc" to="/policy">
             ვებგვერდის პოლიტიკა
           </Link>

@@ -1,17 +1,17 @@
 export default function ControlPanelSection() {
   return (
     <section className=" relative overflow-hidden flex-col flex justify-center">
-      <div className="my-10 flex flex-col items-center justify-center text-center gap-4">
+      <div className="my-10 flex flex-col items-center justify-center text-center gap-4 max-992:mb-0">
         <h2
-          className={`text-head text-center text-[26px] font-mainBold tracking-wide`}
+          className={`text-head text-center text-[26px] max-992:text-[24px] font-mainBold tracking-wide max-600:text-[22px]`}
         >
           <span className="text-main">ონ სერვის</span> პანელი
         </h2>
-        <p className="leading-8 text-desc text-[18px] max-w-[650px]">
+        <p className="leading-8 text-desc text-[18px] max-w-[650px] max-992:text-[18px] max-600:text-[16px] max-600:leading-6.5">
           გთავაზობთ ჩვენს მიერ დამზადებულ ვებგვერდის სამართავ პანელს
         </p>
       </div>
-      <div className=" max-w-[600px] mx-auto w-[90%] my-20">
+      <div className=" max-w-[600px] mx-auto w-[90%] my-15 max-992:my-10 z-10 relative ">
         <img
           className="w-full"
           src="images/services/control_panel.png"
