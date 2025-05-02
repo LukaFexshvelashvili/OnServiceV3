@@ -28,7 +28,7 @@ export default function AdPrinting() {
         <img src="images/dots/dots_fade_bottom.png" className="h-[200px]" />
       </div>
       <div className="os_container ">
-        <div className="w-full flex justify-between py-16 items-center">
+        <div className="w-full flex justify-between py-16 pt-8 items-center">
           <div className="w-[330px]">
             <img
               src="images/projects/Citroen.png"
@@ -36,6 +36,19 @@ export default function AdPrinting() {
             />
           </div>
           <div className="flex items-center flex-col gap-4 text-center">
+            <div className="flex items-center gap-8 mb-2">
+              <img
+                src="images/logos/onservice.png"
+                alt="OnService - ციფრული სერვისები"
+                className="h-[22px]"
+              />
+              <div className="h-6 w-[3px] rounded-md bg-lineColor"></div>
+              <img
+                src="images/logos/new_ad.png"
+                alt="New Ad - რეკლამის ბანერის დამზადება / დაბეჭდვა / გაკვრა"
+                className="h-[32px]"
+              />
+            </div>
             <h1 className="font-mainSemiBold text-2xl tracking-wider text-head">
               <span className="text-main">რეკლამის</span> დამზადება / დაბეჭვა
             </h1>

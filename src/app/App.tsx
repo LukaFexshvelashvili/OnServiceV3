@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
@@ -11,8 +11,14 @@ import NotFound from "./pages/NotFound/NotFound";
 import ContactBlock from "../components/ContactBlock/ContactBlock";
 import Project from "./pages/Project/Project";
 import AdsPrinting from "./pages/AdsPrinting/AdsPrinting";
+import { useEffect } from "react";
 
 export default function App() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar />

@@ -41,9 +41,9 @@ export default function Project() {
             </h3>
 
             <div className="flex gap-15 justify-center py-12 flex-wrap ">
+              {/* <ProjectCard />
               <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              <ProjectCard /> */}
             </div>
           </div>
         </section>

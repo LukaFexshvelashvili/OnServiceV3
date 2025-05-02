@@ -63,7 +63,7 @@ export default function OS_Slider() {
       </div>
       <button
         onClick={sliderLeft}
-        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-mainClear aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == 0
             ? "bg-mainClear hover:bg-mainClearHover"
             : "bg-main hover:bg-mainHover"
@@ -77,7 +77,7 @@ export default function OS_Slider() {
       </button>
       <button
         onClick={sliderRight}
-        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-mainClear aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == items.length - 1
             ? "bg-mainClear hover:bg-mainClearHover"
             : "bg-main hover:bg-mainHover"

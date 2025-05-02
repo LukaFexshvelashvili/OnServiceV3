@@ -1,3 +1,4 @@
+import { projectsList } from "../../../../api/projects";
 import ProjectCard from "../../../../components/Cards/ProjectCard";
 import SectionStarter from "../../../../components/SectionStarter";
 import SectionSeeMore from "./SectionSeeMore";
@@ -11,18 +12,12 @@ export default function ProjectsSection() {
       <SectionStarter title="პროექტები" />
 
       <div className="mt-10 flex flex-wrap justify-center gap-12 max-992:gap-6">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projectsList.slice(0, 9).map((project) => (
+          <ProjectCard project={project} />
+        ))}
       </div>
       <div className="mt-12 max-600:mt-3">
-        <SectionSeeMore title="მეტის ნახვა" link="/" />
+        <SectionSeeMore title="მეტის ნახვა" link="/projects" />
       </div>
     </div>
   );
