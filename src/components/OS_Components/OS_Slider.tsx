@@ -6,26 +6,9 @@ type Titem = {
   image: string;
 };
 
-export default function OS_Slider() {
+export default function OS_Slider(props: { list: string[] }) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const items: Titem[] = [
-    {
-      alt: "MoviesGo - OnService პროექტი",
-      image: "images/projects/MoviesGo.png",
-    },
-    {
-      alt: "MoviesGo - OnService პროექტი",
-      image: "images/projects/MoviesGo1.png",
-    },
-    {
-      alt: "MoviesGo - OnService პროექტი",
-      image: "images/projects/MoviesGo.png",
-    },
-    {
-      alt: "MoviesGo - OnService პროექტი",
-      image: "images/projects/MoviesGo1.png",
-    },
-  ];
+  const items: string[] = props.list;
   const sliderLeft = () => {
     if (activeIndex == 0) {
       setActiveIndex(items.length - 1);
@@ -54,9 +37,9 @@ export default function OS_Slider() {
               className={
                 "max-w-full max-h-full w-full h-auto object-contain max-992:h-full max-992:w-full"
               }
-              src={items[i].image}
+              src={items[i]}
               loading={activeIndex == i ? "eager" : "lazy"}
-              alt={items[i].alt}
+              // alt={items[i].alt}
             />
           </div>
         ))}

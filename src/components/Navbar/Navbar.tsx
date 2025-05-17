@@ -16,7 +16,7 @@ export default function Navbar() {
             <p>ონ სერვისი</p>
           </Link>
           <div className="h-5 aspect-square rounded-3xl bg-transparent outline-2 outline-lineColor p-[2px] cursor-pointer">
-            <img src="images/languages/georgia.png" alt="Georgian Flag" />
+            <img src="/images/languages/georgia.png" alt="Georgian Flag" />
           </div>
         </div>
 

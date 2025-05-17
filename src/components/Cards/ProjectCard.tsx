@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: TprojectItem }) {
   return (
     <div
       style={{ "--project-color": project.color } as React.CSSProperties}
-      className="relative w-[400px] max-992:h-auto max-600:outline-0 h-[400px] bg-bodyBg rounded-md outline-2 outline-lineColor p-5 max-600:px-2 flex flex-col gap-3 pt-9 max-600:gap-1 items-center overflow-hidden"
+      className="relative w-[400px] max-992:h-auto max-600:outline-0 h-[400px] bg-bodyBg rounded-md outline-2 outline-lineColor p-5 max-600:px-2 flex flex-col gap-3 pt-12 max-600:gap-1 items-center overflow-hidden"
     >
       <div className="absolute bg-[var(--project-color)] top-0 left-0 max-600:h-[30px] max-600:w-[120px] max-600:text-xs h-[32px] w-[140px] z-10 case_up font-mainMedium flex justify-center items-center text-[14px] text-white">
         {get_type(project.type[0])}
@@ -60,7 +60,7 @@ export default function ProjectCard({ project }: { project: TprojectItem }) {
       </p>
       <Link
         className="max-600:text-[15px] case_up font-mainSemiBold text-[16px] text-[var(--project-color)] inline-flex gap-2 items-center mt-auto ml-auto"
-        to={"/projects/" + project.id}
+        to={"/project/" + project.id}
       >
         ნახვა
         <DoubleArrowIcon className="[&>path]:stroke-[var(--project-color)]" />

@@ -35,7 +35,7 @@ function AppRouter() {
       <Route path="/" errorElement={<NotFound />}>
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
-        <Route path="project" element={<Project />} />
+        <Route path="project/:id" element={<Project />} />
         <Route path="projects" element={<Projects />} />
         <Route path="contact" element={<Contact />} />
         <Route path="website_development" element={<WebDeveloping />} />

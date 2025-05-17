@@ -1,54 +1,85 @@
 import { useState } from "react";
 import ProjectCard from "../../../components/Cards/ProjectCard";
+import { projectsList } from "../../../api/projects";
 
 export default function Projects() {
+  const [filters, setFilters] = useState([0, 1, 2, 3, 4]);
+  const handleFilterChange = (filter: number, active: boolean) => {
+    setFilters((prev) =>
+      active ? [...prev, filter] : prev.filter((f) => f !== filter)
+    );
+  };
+
   return (
     <main>
       <div className="os_container py-8">
-        <Filters />
+        <div className="relative w-full h-[80px] outline-2 outline-lineColor rounded-md">
+          <p className="absolute case_up font-mainSemiBold tracking-wider text-main left-4 top-0 -translate-y-2/4 px-2 bg-bodyBg">
+            ფილტრები
+          </p>
+          <div className="flex justify-center gap-10 items-center w-full h-full">
+            <FilterButton
+              id={0}
+              title="ვებგვერდები"
+              onToggle={handleFilterChange}
+            />
+            <FilterButton
+              id={1}
+              title="დიზაინები"
+              onToggle={handleFilterChange}
+            />
+            <FilterButton
+              id={2}
+              title="რეკლამები"
+              onToggle={handleFilterChange}
+            />
+            <FilterButton
+              id={3}
+              title="სხვა სერვისები"
+              onToggle={handleFilterChange}
+            />
+          </div>
+        </div>
         <div className="flex mt-10 justify-center gap-10 flex-wrap">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projectsList.map(
+            (project) =>
+              project.type.some((type) => filters.includes(type)) && (
+                <ProjectCard project={project} />
+              )
+          )}
         </div>
       </div>
     </main>
   );
-
-  function Filters() {
-    return (
-      <div className="relative w-full h-[80px] outline-2 outline-lineColor rounded-md">
-        <p className="absolute case_up font-mainSemiBold tracking-wider text-main left-4 top-0 -translate-y-2/4 px-2 bg-bodyBg">
-          ფილტრები
-        </p>
-        <div className="flex justify-center gap-10 items-center w-full h-full">
-          <FilterButton title="ვებგვერდები" />
-          <FilterButton title="დიზაინები" />
-          <FilterButton title="რეკლამები" />
-          <FilterButton title="სხვა სერვისები" />
-        </div>
-      </div>
-    );
-  }
 }
 
-function FilterButton({ title }: { title: string }) {
-  const [active, setActive] = useState(false);
+function FilterButton({
+  id,
+  title,
+  onToggle,
+}: {
+  id: number;
+  title: string;
+  onToggle: (id: number, active: boolean) => void;
+}) {
+  const [active, setActive] = useState(true);
   return (
     <button
-      onClick={() => setActive((state: boolean) => !state)}
+      onClick={() => {
+        setActive((state) => {
+          const newState = !state;
+          onToggle(id, newState);
+          return newState;
+        });
+      }}
       className="flex items-center gap-3 cursor-pointer px-2 h-[40px] tracking-[1px] text-headDark60 font-mainSemiBold case_up"
     >
       <div
         className={`h-[16px] aspect-square border-2 border-main rounded-sm flex justify-center items-center transition-colors ${
           active ? "bg-main" : "bg-transparent"
-        } `}
+        }`}
       >
+        {/* Checkmark */}
         <svg
           width="12"
           height="14"

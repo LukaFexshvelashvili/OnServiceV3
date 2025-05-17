@@ -1,5 +1,3 @@
-import { ServiceIcon } from "../../../../assets/icons/OS_icons";
-
 export default function BarInfo(props: { title: string; data: string }) {
   return (
     <div className="flex flex-col gap-1 text-center w-[280px] max-600:px-6">
