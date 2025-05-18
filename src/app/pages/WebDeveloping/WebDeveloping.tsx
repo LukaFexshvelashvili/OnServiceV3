@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import {
   ControlIcon,
   SecurityIcon,
@@ -9,6 +10,16 @@ import {
 import OS_ServiceBlock from "../../../components/OS_Components/OS_ServiceBlock";
 import PageLine from "../../../components/PageLine";
 import SectionStarter from "../../../components/SectionStarter";
+import { delay } from "motion";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 export default function WebDeveloping() {
   return (
@@ -19,29 +30,52 @@ export default function WebDeveloping() {
       <div className="os_container ">
         <div className="w-full flex justify-between py-16 items-center">
           <div className="w-[330px]">
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               src="images/projects/MoviesGo.png"
               alt="Web Development - OnService"
+              width={330}
             />
           </div>
           <div className="flex items-center flex-col gap-4 text-center">
-            <h1 className="font-mainSemiBold text-2xl tracking-wider text-head">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="font-mainSemiBold text-2xl tracking-wider text-head"
+            >
               <span className="text-main">ვებგვერდის</span> დამზადება
-            </h1>
-            <h3 className="text-desc max-w-[550px] leading-7">
+            </motion.h1>
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              className="text-desc max-w-[550px] leading-7"
+            >
               ჩვენ გთავაზობთ ვებგვერდის დამზადებას თანამედროვე ტექნოლოგიების
               გამოყენებით, რომლებიც უზრუნველყოფენ ვებგვერდის სისწრადეს, ადვილად
               ძიებას, და ფუნქციონალს
-            </h3>
-            <div className="flex gap-2 mt-3 case_up text-md text-sm">
+            </motion.h3>
+            <motion.div
+              className="flex gap-2 mt-3 case_up text-md text-sm"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            >
               <button className="os_b font-mainMedium">შეუკვეთე ახლავე</button>
               <button className="os_sb min-w-[190px]">გაიგე მეტი</button>
-            </div>
+            </motion.div>
           </div>
           <div className="w-[330px]">
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               src="images/projects/OnHome.png"
               alt="ვებგვერდის დამზადება - ონსერვისი"
+              width={330}
             />
           </div>
         </div>
@@ -57,7 +91,12 @@ export default function WebDeveloping() {
         </div>
         <div className="os_container">
           <SectionStarter title="სერვისები" line />
-          <div className="grid grid-cols-3 gap-y-10 justify-items-center items-start py-14">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-3 gap-y-10 justify-items-center items-start py-14"
+          >
             <OS_ServiceBlock
               icon={WebsiteIcon}
               title="ვებგვერდის დამზადება"
@@ -94,7 +133,7 @@ export default function WebDeveloping() {
               description="მზადვართ ამომწურავი პასუხი გაგცეთ ვებგვერდთან დაკავშირებულ კითხვებზე"
               link=""
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <PageLine />

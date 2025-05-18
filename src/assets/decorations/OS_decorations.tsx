@@ -1,11 +1,13 @@
-export const StarterDecoration = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
+import { motion, SVGMotionProps } from "motion/react";
+
+export const StarterDecoration = (props: SVGMotionProps<SVGSVGElement>) => (
+  <motion.svg
     width="500"
     height="500"
-    {...props}
     viewBox="0 0 500 500"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path
       d="M273.59 16.87C317.07 25.62 366.48 49.8 386.68 91.74C417.21 155.1 472.12 154.46 486.23 274.45C488.369 291.956 488.604 309.643 486.93 327.2C486.075 335.786 484.678 344.31 482.75 352.72C465.69 426.87 409.44 473.13 345 486.55C260.22 504.21 210 451.13 179.92 416.21C149.84 381.29 50 349.4 35.2 231.55C32.8658 213.569 32.6141 195.379 34.45 177.34C38.81 136.19 56 92.34 86.78 63.49C89.0934 61.33 91.4767 59.2367 93.93 57.21C141.83 17.56 214.31 4.94001 273.59 16.87Z"
@@ -1193,7 +1195,7 @@ export const StarterDecoration = (props: React.SVGProps<SVGSVGElement>) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>
+  </motion.svg>
 );
 
 export const LineChartDecoration = (props: React.SVGProps<SVGSVGElement>) => (
@@ -1442,8 +1444,8 @@ export const EmailUsDecoration = (props: React.SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export const LineStartDecoration = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
+export const LineStartDecoration = (props: SVGMotionProps<SVGSVGElement>) => (
+  <motion.svg
     width="912"
     height="258"
     viewBox="0 0 912 258"
@@ -1451,21 +1453,24 @@ export const LineStartDecoration = (props: React.SVGProps<SVGSVGElement>) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
+    <motion.path
       d="M8.49969 -66C-55.5002 235.35 496.5 291 909 235.35"
       stroke="black"
-      stroke-opacity="0.05"
-      stroke-width="6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-dasharray="15 15"
+      strokeOpacity="0.05"
+      strokeWidth="6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeDasharray="15 15"
+      initial={{ strokeDashoffset: 300, opacity: 0 }}
+      animate={{ strokeDashoffset: 0, opacity: 1 }}
+      transition={{ duration: 3 }}
     />
-  </svg>
+  </motion.svg>
 );
 export const LineStartRightDecoration = (
-  props: React.SVGProps<SVGSVGElement>
+  props: SVGMotionProps<SVGSVGElement>
 ) => (
-  <svg
+  <motion.svg
     width="211"
     height="343"
     viewBox="0 0 211 343"
@@ -1473,7 +1478,7 @@ export const LineStartRightDecoration = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
+    <motion.path
       d="M3 13.5C214.432 -54.8311 -28.362 234.275 317 339.35"
       stroke="black"
       stroke-opacity="0.05"
@@ -1481,8 +1486,11 @@ export const LineStartRightDecoration = (
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-dasharray="15 15"
+      initial={{ strokeDashoffset: -300, opacity: 0 }}
+      animate={{ strokeDashoffset: 0, opacity: 1 }}
+      transition={{ duration: 3 }}
     />
-  </svg>
+  </motion.svg>
 );
 export const LineDecorationConsultation = (
   props: React.SVGProps<SVGSVGElement>

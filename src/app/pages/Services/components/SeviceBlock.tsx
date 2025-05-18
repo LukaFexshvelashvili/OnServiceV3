@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { DoubleArrowIcon } from "../../../../assets/icons/OS_icons";
 
 type TServiceBlock = {
@@ -9,6 +10,7 @@ type TServiceBlock = {
   right?: boolean;
   outsideDesign?: React.ReactNode;
   insideDesign?: React.ReactNode;
+  transitionx?: boolean;
 };
 export default function SeviceBlock({
   title,
@@ -19,7 +21,16 @@ export default function SeviceBlock({
   right,
   outsideDesign,
   insideDesign,
+  transitionx,
 }: TServiceBlock) {
+  const variant = {
+    visible: transitionx ? { opacity: 0, x: 100 } : { opacity: 0, y: 50 },
+    hidden: transitionx ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
+  };
+  const variant2 = {
+    visible: transitionx ? { opacity: 0, x: -100 } : { opacity: 0, y: 50 },
+    hidden: transitionx ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 },
+  };
   return (
     <section className="py-8 relative">
       {outsideDesign}
@@ -30,10 +41,15 @@ export default function SeviceBlock({
       >
         {insideDesign}
 
-        <div
+        <motion.div
+          initial="visible"
+          whileInView="hidden"
+          variants={variant}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           className={`flex-1 flex flex-col gap-3 max-600:gap-2 relative ${
             right ? " text-end items-end" : "items-start"
-          }  max-1200:items-center max-1200:text-center `}
+          }  max-1200:items-center max-1200:text-center  h-[250px]`}
         >
           <h2 className=" case_up text-headDark text-[24px] font-mainSemiBold tracking-wider  max-600:text-[20px] max-992:text-[22px]">
             {title}
@@ -64,14 +80,19 @@ export default function SeviceBlock({
             მეტის ნახვა{" "}
             <DoubleArrowIcon className={`${right && "rotate-180"}`} />
           </a>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial="visible"
+          whileInView="hidden"
+          variants={variant2}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           className={`flex-1 relative flex ${
             right ? "justify-start" : "justify-end"
           } `}
         >
           {previewImage}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

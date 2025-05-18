@@ -23,12 +23,14 @@ export default function Services() {
               src="images/projects/MoviesGo.png"
               className="max-h-[300px]"
               alt="ვებგვერდის დამზადება"
+              height={300}
             />
           }
           subtitle="ჩვენ დაგიმზადებთ ვებგვერდს თანამედროვე ტექნოლოგიებით რომლებიც უზრუნველყოფს ვებგვერდის ხელმისაწვდომობას სისწრაფეს და ოპტიმიზაციას"
           link="/website_development"
         />
         <SeviceBlock
+          transitionx
           title={
             <>
               <span className="text-main">ციფრული</span> რეკლამირება
@@ -49,6 +51,8 @@ export default function Services() {
             <img
               src="images/dots/dots_fade_left.png"
               className="absolute right-0 z-0 h-full max-h-[340px]  max-1200:opacity-30"
+              height={340}
+              alt="კონსულტაცია"
             />
           }
           title={
@@ -67,6 +71,7 @@ export default function Services() {
           link="/consultation"
         />
         <SeviceBlock
+          transitionx
           title={
             <>
               <span className="text-main">დიზაინის</span> დამზადება
@@ -74,8 +79,9 @@ export default function Services() {
           }
           previewImage={
             <img
-              src="images/services/design_making.png"
+              src="images/services/design_making.webp"
               className="max-h-[300px] shadow-xl "
+              height={300}
               alt="დიზაინის დამზადება"
             />
           }
@@ -112,6 +118,7 @@ export default function Services() {
           link="/video_player"
         />
         <SeviceBlock
+          transitionx
           title={
             <>
               <span className="text-main">რეკლამის</span> დაბეჭდვა / გაკვრა
