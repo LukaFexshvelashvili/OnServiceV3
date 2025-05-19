@@ -40,6 +40,7 @@ export default function ProjectCard({
           src={project.images[0]}
           className="h-full object-cover"
           alt={"OnService Project - " + project.name}
+          height={200}
         />
       </div>
       <h3 className="font-mainBold text-[22px] max-600:text-[20px] uppercase text-headDark90 text-center tracking-wider w-full mt-2">

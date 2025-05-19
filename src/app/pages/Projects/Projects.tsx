@@ -1,7 +1,20 @@
 import { useState } from "react";
 import ProjectCard from "../../../components/Cards/ProjectCard";
 import { projectsList } from "../../../api/projects";
+import { motion } from "motion/react";
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
 export default function Projects() {
   const [filters, setFilters] = useState([0, 1, 2, 3, 4]);
   const handleFilterChange = (filter: number, active: boolean) => {
@@ -13,11 +26,11 @@ export default function Projects() {
   return (
     <main>
       <div className="os_container py-8">
-        <div className="relative w-full h-[80px] outline-2 outline-lineColor rounded-md">
+        <div className="relative w-full min-h-[80px] h-auto outline-2 py-5 outline-lineColor rounded-md">
           <p className="absolute case_up font-mainSemiBold tracking-wider text-main left-4 top-0 -translate-y-2/4 px-2 bg-bodyBg">
             ფილტრები
           </p>
-          <div className="flex justify-center gap-10 items-center w-full h-full">
+          <div className="flex justify-center gap-10 items-center w-full h-full flex-wrap gap-y-3">
             <FilterButton
               id={0}
               title="ვებგვერდები"
@@ -40,14 +53,19 @@ export default function Projects() {
             />
           </div>
         </div>
-        <div className="flex mt-10 justify-center gap-10 flex-wrap">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex mt-10 justify-center gap-10 flex-wrap"
+        >
           {projectsList.map(
             (project) =>
               project.type.some((type) => filters.includes(type)) && (
-                <ProjectCard project={project} />
+                <ProjectCard project={project} variants={itemVariants} />
               )
           )}
-        </div>
+        </motion.div>
       </div>
     </main>
   );

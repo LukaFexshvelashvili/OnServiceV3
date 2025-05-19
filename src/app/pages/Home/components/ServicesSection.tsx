@@ -10,21 +10,20 @@ import {
 import SectionStarter from "../../../../components/SectionStarter";
 import SectionSeeMore from "./SectionSeeMore";
 
-export default function ServicesSection() {
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
     },
-  };
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
-  };
-
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+export default function ServicesSection() {
   return (
     <section className=" relative overflow-hidden flex items-center max-600:mt-6">
       <div className="absolute z-0 top-0 left-15  max-992:left-0 flex justify-between no-select">

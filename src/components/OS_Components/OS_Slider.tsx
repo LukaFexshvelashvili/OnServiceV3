@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { LeftArrowIcon, RightArrowIcon } from "../../assets/icons/OS_icons";
 
-type Titem = {
-  alt: string;
-  image: string;
-};
+// type Titem = {
+//   alt: string;
+//   image: string;
+// };
 
 export default function OS_Slider(props: { list: string[] }) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -46,10 +46,10 @@ export default function OS_Slider(props: { list: string[] }) {
       </div>
       <button
         onClick={sliderLeft}
-        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-mainClear aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-main/10 aspect-square rounded-[25px] absolute left-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == 0
-            ? "bg-mainClear hover:bg-mainClearHover"
-            : "bg-main hover:bg-mainHover"
+            ? "bg-main/10 hover:bg-main/15"
+            : "bg-main hover:bg-main/90"
         } transition-colors`}
       >
         <LeftArrowIcon
@@ -60,10 +60,10 @@ export default function OS_Slider(props: { list: string[] }) {
       </button>
       <button
         onClick={sliderRight}
-        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-mainClear aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
+        className={`h-[46px] max-1200:h-[42px] max-1200:p-3 shadow-lg shadow-main/10 aspect-square rounded-[25px] absolute right-0 p-3.5 flex justify-center items-center cursor-pointer ${
           activeIndex == items.length - 1
-            ? "bg-mainClear hover:bg-mainClearHover"
-            : "bg-main hover:bg-mainHover"
+            ? "bg-main/10 hover:bg-main/15"
+            : "bg-main hover:bg-main/90"
         } transition-colors`}
       >
         <RightArrowIcon

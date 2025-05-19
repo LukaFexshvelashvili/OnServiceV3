@@ -86,26 +86,50 @@ export default function Navbar() {
             <div className="flex flex-col gap-3 mt-6 ">
               <div className="flex flex-col gap-2.5 ">
                 <p className="text-desc text-[13px] case_up">ნავიგაცია</p>
-                <p className="text-head text-[14px]">პროექტები</p>
-                <p className="text-head text-[14px]">სერვისები</p>
-                <p className="text-head text-[14px]">კონტაქტი</p>
+                <Link to={"/projects"} className="text-head text-[14px]">
+                  პროექტები
+                </Link>
+                <Link to={"/services"} className="text-head text-[14px]">
+                  სერვისები
+                </Link>
+                <Link to={"/contact"} className="text-head text-[14px]">
+                  კონტაქტი
+                </Link>
               </div>
               <div className="h-[1px] w-full bg-lineColor"></div>
               <div className="flex flex-col gap-2.5 ">
                 <p className="text-desc text-[13px] case_up">პროექტები</p>
-                <p className="text-head text-[14px]">ვებგვერდები</p>
+                <Link
+                  to={"/website_development"}
+                  className="text-head text-[14px]"
+                >
+                  ვებგვერდები
+                </Link>
                 <p className="text-head text-[14px]">დიზაინები</p>
-                <p className="text-head text-[14px]">რეკლამები</p>
+                <Link
+                  to={"advertisement_printing"}
+                  className="text-head text-[14px]"
+                >
+                  რეკლამები
+                </Link>
               </div>
               <div className="h-[1px] w-full bg-lineColor"></div>
 
               <div className="flex flex-col gap-2.5 ">
                 <p className="text-desc text-[13px] case_up">სერვისები</p>
-                <p className="text-head text-[14px]">ვებგვერდის დამზადება</p>
+                <Link
+                  to={"/website_development"}
+                  className="text-head text-[14px]"
+                >
+                  ვებგვერდის დამზადება
+                </Link>
                 <p className="text-head text-[14px]">დიზაინის დამზადება</p>
-                <p className="text-head text-[14px]">
+                <Link
+                  to={"advertisement_printing"}
+                  className="text-head text-[14px]"
+                >
                   რეკლამის დაბეჭდვა / გაკვრა
-                </p>
+                </Link>
                 <p className="text-head text-[14px]">პერსონალური კონსულტაცია</p>
                 <p className="text-head text-[14px]">ციფრული რეკლამირება</p>
               </div>

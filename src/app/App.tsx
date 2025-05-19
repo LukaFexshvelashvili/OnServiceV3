@@ -11,7 +11,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import ContactBlock from "../components/ContactBlock/ContactBlock";
 import Project from "./pages/Project/Project";
 import AdsPrinting from "./pages/AdsPrinting/AdsPrinting";
-import { useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 export default function App() {
   const location = useLocation();
@@ -31,18 +32,21 @@ export default function App() {
 
 function AppRouter() {
   return (
-    <Routes>
-      <Route path="/" errorElement={<NotFound />}>
-        <Route index element={<Home />} />
-        <Route path="services" element={<Services />} />
-        <Route path="project/:id" element={<Project />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="website_development" element={<WebDeveloping />} />
-        <Route path="advertisement_printing" element={<AdsPrinting />} />
-        <Route path="design" element={<Design />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<Loader />}>
+      {/* {loading && <Loader onFinish={() => setLoading(false)} />} */}
+      <Routes>
+        <Route path="/" errorElement={<NotFound />}>
+          <Route index element={<Home />} />
+          <Route path="services" element={<Services />} />
+          <Route path="project/:id" element={<Project />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="website_development" element={<WebDeveloping />} />
+          <Route path="advertisement_printing" element={<AdsPrinting />} />
+          <Route path="design" element={<Design />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }

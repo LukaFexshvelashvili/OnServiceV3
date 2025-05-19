@@ -8,6 +8,8 @@ import {
   ViberIcon,
   WhatsappIcon,
 } from "../../assets/icons/OS_icons";
+import axios from "axios";
+import { useActionState } from "react";
 
 export default function ContactBlock() {
   return (
@@ -30,6 +32,25 @@ export default function ContactBlock() {
 }
 
 export function ContactCard() {
+  const [data, action] = useActionState(
+    async (_prevState: unknown, formData: FormData) => {
+      try {
+        const res = await axios.post(
+          "https://moviesgo.ge/testing/test.php",
+          {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+          },
+          { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
+        );
+        return res.data;
+      } catch (error) {
+        return { success: false, message: "Error sending email." };
+      }
+    },
+    { success: false, message: "" }
+  );
   return (
     <div className="max-992:flex-col max-992:h-auto relative z-10 max-w-[1200px] w-full h-[450px] bg-white rounded-xl shadow-[0px_4px_30px_rgba(215,_215,_215,_0.25)] flex overflow-hidden">
       <div className=" p-4 px-6 w-2/4 max-992:px-4 max-992:py-3 flex flex-col justify-center max-992:w-full">
@@ -39,11 +60,14 @@ export function ContactCard() {
         <p className="text-desc font-mainMedium text-[18px] tracking-wide mt-2 max-600:text-[16px] max-600:text-center">
           ჩვენ დაგეხმარებით განავითაროთ თქვენი ბიზნესი
         </p>
-        <form className="flex flex-col gap-4 mt-6 max-600:gap-3 max-600:mt-4">
+        <form className="flex flex-col gap-4 mt-6" action={action}>
           <ContactInput name="name" placeholder="სახელი" />
           <ContactInput name="email" placeholder="მეილი" />
           <ContactInput name="message" placeholder="შეტყობინება" long />
-          <button className="w-full bg-gradient-to-r from-main to-purple h-[50px] max-600:h-[45px] tracking-wider rounded-lg text-white font-mainSemiBold cursor-pointer transition-opacity hover:opacity-90">
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-main to-purple h-[50px] max-600:h-[45px] tracking-wider rounded-lg text-white font-mainSemiBold cursor-pointer transition-opacity hover:opacity-90"
+          >
             გაგზავნა
           </button>
         </form>
