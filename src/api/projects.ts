@@ -243,5 +243,18 @@ export const projectsList: TprojectItem[] = [
     slice_last: -3,
     link: null,
   },
+  {
+    id: 27,
+    type: [0, 1],
+    color: "#ff8800",
+    images: [
+      "/projects/TintingLaboratory/ResponsiveMockup.png",
+      "/projects/TintingLaboratory/Mobile.png",
+    ],
+    name: "Tinting Laboratory",
+    description: "Tinting Laboratory - Galway Tinting Services",
+    slice_last: -7,
+    link: "https://tintinglaboratory.com/",
+  },
 ];
 export const typesList: string[] = ["ვებგვერდი", "დიზაინი", "რეკლამა"];
