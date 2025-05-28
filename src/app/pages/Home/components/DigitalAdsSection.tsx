@@ -22,7 +22,7 @@ const itemVariants = {
 
 export default function DigitalAdsSection() {
   return (
-    <div className="os_container flex items-center py-20  max-992:py-10 relative max-1200:flex-col max-1200:gap-10">
+    <div className="os_container flex items-center py-20  max-992:py-10 relative max-1200:flex-col max-1200:gap-10 overflow-x-hidden">
       <div className="flex-1">
         <div className="flex flex-col gap-5 max-600:gap-3.5">
           <motion.h2

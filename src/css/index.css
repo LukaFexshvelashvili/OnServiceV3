@@ -40,6 +40,9 @@
   --color-whiteDesc: rgba(255, 255, 255, 0.8);
   --color-whiteLow: rgba(255, 255, 255, 0.6);
   --color-white70: rgba(255, 255, 255, 0.7);
+  --font-main2Regular: "main2Regular";
+  --font-main2Medium: "main2Medium";
+  --font-main2Bold: "main2Bold";
 
   --font-mainRegular: "mainRegular";
   --font-mainMedium: "mainMedium";
@@ -86,7 +89,18 @@
   font-family: mainBold;
   src: url("../assets/fonts/OnService-Bold.woff2");
 }
-
+@font-face {
+  font-family: main2Regular;
+  src: url("../assets/fonts/Service-Regular.ttf");
+}
+@font-face {
+  font-family: main2Medium;
+  src: url("../assets/fonts/Service-Medium.otf");
+}
+@font-face {
+  font-family: main2Bold;
+  src: url("../assets/fonts/Service-Bold.ttf");
+}
 body {
   font-family: var(--font-mainMedium);
   letter-spacing: 0.5px;
@@ -154,7 +168,6 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 42px;
-  color: var(--color-main);
   font-family: var(--font-mainMedium);
   border-radius: 5px;
   padding: 0 15px;
@@ -175,6 +188,25 @@ textarea {
 }
 .os_sb:hover:before {
   transform: scaleX(1);
+}
+.hero_bg {
+  background: #202020;
+  background: -webkit-linear-gradient(
+    120deg,
+    rgba(32, 32, 32, 1) 53%,
+    rgba(26, 123, 255, 1) 53.05%
+  );
+  background: -moz-linear-gradient(
+    120deg,
+    rgba(32, 32, 32, 1) 53%,
+    rgba(26, 123, 255, 1) 53.05%
+  );
+  background: linear-gradient(
+    120deg,
+    rgba(32, 32, 32, 1) 53%,
+    rgba(26, 123, 255, 1) 53.05%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202020", endColorstr="#1A7BFF", GradientType=0);
 }
 .no-select::before {
   content: "";
@@ -234,6 +266,7 @@ textarea {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0);
 }
+
 @keyframes cssload-spin {
   0%,
   to {

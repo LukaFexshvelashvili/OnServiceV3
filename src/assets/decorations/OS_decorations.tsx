@@ -1455,7 +1455,7 @@ export const LineStartDecoration = (props: SVGMotionProps<SVGSVGElement>) => (
   >
     <motion.path
       d="M8.49969 -66C-55.5002 235.35 496.5 291 909 235.35"
-      stroke="black"
+      stroke="currentColor"
       strokeOpacity="0.05"
       strokeWidth="6"
       strokeLinecap="round"
@@ -1480,7 +1480,7 @@ export const LineStartRightDecoration = (
   >
     <motion.path
       d="M3 13.5C214.432 -54.8311 -28.362 234.275 317 339.35"
-      stroke="black"
+      stroke="currentColor"
       stroke-opacity="0.05"
       stroke-width="6"
       stroke-linecap="round"
@@ -1492,6 +1492,28 @@ export const LineStartRightDecoration = (
     />
   </motion.svg>
 );
+export const CircleDecoration = (props: SVGMotionProps<SVGSVGElement>) => (
+  <motion.svg
+    width="214"
+    height="214"
+    viewBox="0 0 214 214"
+    {...props}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="6"
+      y="6"
+      width="202"
+      height="202"
+      rx="101"
+      stroke="white"
+      stroke-opacity="0.02"
+      stroke-width="12"
+    />
+  </motion.svg>
+);
+
 export const LineDecorationConsultation = (
   props: React.SVGProps<SVGSVGElement>
 ) => (

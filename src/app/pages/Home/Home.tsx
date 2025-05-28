@@ -4,7 +4,7 @@ import DigitalAdsSection from "./components/DigitalAdsSection";
 import FrequentlyAskedSection from "./components/FrequentlyAskedSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
-import StarterSection from "./components/StarterSection";
+import StarterSectionDark from "./components/StarterSectionDark";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         ციფრული სერვისები - ვებგვერდის დამზადება, დიზაინის დამზადება,
         გარეკლამება
       </title>
-      <StarterSection />
+      <StarterSectionDark />
       <ServicesSection />
       <PageLine />
       <ProjectsSection />

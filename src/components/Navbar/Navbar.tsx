@@ -1,16 +1,42 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { CallIcon, LogoIcon } from "../../assets/icons/OS_icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [MobileNav, setMobileNav] = useState<boolean>(false);
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const heroElement = document.querySelector("#hero_section");
+    if (!heroElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(heroElement);
+
+    return () => {
+      observer.unobserve(heroElement);
+    };
+  }, [location.pathname]);
+  console.log(isHeroVisible);
+
   return (
-    <nav className="h-[var(--nav-height)] border-b-2 border-lineColor flex items-center max-992:sticky max-992:top-0 bg-bodyBg z-40">
+    <nav
+      className={`h-[var(--nav-height)] fixed top-0 border-b-2 border-white/5 backdrop-blur-[4px] flex items-center  max-992:top-0 transition-all ${
+        isHeroVisible ? "bg-white/5" : "bg-black/80"
+      } w-full z-40`}
+    >
       <div className="os_container flex items-center justify-between   w-full">
         <div className="flex items-center gap-5">
           <Link
             to={"/"}
-            className="flex items-center gap-3 font-mainBold text-main text-md tracking-wider cursor-pointer"
+            className="flex items-center gap-3 font-mainSemiBold text-white text-md tracking-wider cursor-pointer"
           >
             <LogoIcon height={22} width={22} />
             <p>ონ სერვისი</p>
@@ -20,7 +46,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <ul className="flex items-center gap-8 text-navDesc  max-992:hidden">
+        <ul className="flex items-center gap-8 text-white/90 tracking-widest font-main2Medium case_up font-[400] max-992:hidden">
           <li className="cursor-pointer flex items-center justify-center navLi">
             <Link to={"/projects"}>პროექტები</Link>
           </li>
@@ -35,7 +61,7 @@ export default function Navbar() {
         </ul>
         <Link
           to={"tel:+995 598 15 92 15"}
-          className="max-992:hidden flex items-center gap-2 bg-main rounded-md text-buttonText h-[36px] w-[160px] text-sm justify-center cursor-pointer transition-colors hover:bg-mainHover"
+          className="max-992:hidden flex items-center gap-2 bg-[#202020] hover:bg-[#161616] font-main2Medium case_up rounded-md text-buttonText h-[36px] w-[160px] text-sm justify-center cursor-pointer transition-colors  "
         >
           <CallIcon height={18} width={18} />
           დაგვირეკე
@@ -47,17 +73,17 @@ export default function Navbar() {
           } transition-all aspect-square justify-center items-end gap-1.5`}
         >
           <span
-            className={`h-[2px] w-full bg-main transition-transform duration-300 ${
+            className={`h-[2px] w-full bg-white transition-transform duration-300 ${
               MobileNav ? " translate-y-2 rotate-45" : ""
             } `}
           ></span>
           <span
-            className={`h-[2px] w-3/4 bg-main transition-opacity duration-300 ${
+            className={`h-[2px] w-3/4 bg-white transition-opacity duration-300 ${
               MobileNav ? " opacity-0" : ""
             } `}
           ></span>
           <span
-            className={`h-[2px] w-2/4 bg-main transition-transform duration-300 ${
+            className={`h-[2px] w-2/4 bg-white transition-transform duration-300 ${
               MobileNav ? " -translate-y-2 -rotate-45 w-full" : ""
             } `}
           ></span>

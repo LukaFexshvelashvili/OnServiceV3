@@ -25,7 +25,7 @@ const itemVariants = {
 };
 export default function ServicesSection() {
   return (
-    <section className=" relative overflow-hidden flex items-center max-600:mt-6">
+    <section className=" relative overflow-hidden flex items-center max-600:mt-6 pt-8">
       <div className="absolute z-0 top-0 left-15  max-992:left-0 flex justify-between no-select">
         <img
           src="images/dots/dots.png"

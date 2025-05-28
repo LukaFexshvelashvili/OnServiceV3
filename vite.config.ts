@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/",
   server: {
-    allowedHosts: ["spectacular-widescreen-completed-filled.trycloudflare.com"],
+    allowedHosts: ["formal-cow-brunette-secretariat.trycloudflare.com"],
   },
 });
